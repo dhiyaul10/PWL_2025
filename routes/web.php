@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,3 +44,5 @@ Route::get('/articles/{id}', [PageController::class,'articles']);
 Route::get('/user/{name?}', function ($name='John') {
     return 'Dhiya '.$name;
 });
+
+Route::resource('photos', PhotoController::class); 
